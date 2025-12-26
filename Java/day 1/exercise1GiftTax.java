@@ -3,11 +3,11 @@ import java.util.Scanner;
 public class exercise1GiftTax {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("How much did you spend on gifts?: ");
-        int giftExpense = scanner.nextInt();
+        System.out.println("How much did you spend on gifts?: "); //scanner start
+        int giftExpense = scanner.nextInt(); //scanner detect
         if (giftExpense >= 5000 && giftExpense <= 24999) {
-            double giftTax = ((giftExpense - 5000) * 0.08) + 100;
-            double giftTotal = giftExpense + giftTax;
+            double giftTax = ((giftExpense - 5000) * 0.08) + 100; //maths. can use double since decimal n shit
+            double giftTotal = giftExpense + giftTax; //must be double at the end to avoid confusion
             System.out.println("That's under tier 1 tax: 100 + 8% of the amount over 5,000");
             System.out.println("Your tax will be " + giftTax + " and your total will be " + giftTotal);
         } else if (giftExpense >= 25000 && giftExpense <= 54999) {
